@@ -13,6 +13,9 @@
   }
   ```
 
+
+
+
   Bonuses
   - Make sure that lower case letters and upper case letters count for the same character.
   - Ignore spaces, special characters, and punctuation.
@@ -31,3 +34,25 @@
 */
 
 // YOUR CODE HERE
+
+var input = "haha";
+var string=input.replace(/[^A-Z0-9]/ig,"").toLowerCase().split('');
+var stringlength= string.length;
+var uniquelist = [];
+var listobject = {};
+
+for  (i=0; i<stringlength; i++){
+     if (uniquelist.indexOf(string[i]) < 0){
+         uniquelist.push(string[i]);
+     }
+}
+
+for (i=0; i< uniquelist.length; i++){
+     for (a=0; a<string.length; a++){
+       if (uniquelist[i]==string[a]){
+  // //       listobject.uniquelist[i] = 1;    I'M NOT SURE HOW TO CREATE AN OBJECT FROM THESE ELEMENTS...THIS IS
+  // MY ATTEMPT AT DOING SO
+         console.log(uniquelist[i]);
+       }
+     }
+}

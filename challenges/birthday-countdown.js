@@ -34,3 +34,31 @@
 */
 
 // YOUR CODE HERE
+
+//input must be in quotations
+    function daysUntilDate(dateinput){
+
+    var miliseconds = new Date(dateinput) - Date.now();
+    var difference = Math.round(miliseconds / 86400000);
+    return difference;
+   }
+
+   function birthdayReminder(birthdaypeople){
+      reminder = [];
+      for (i=0; i<birthdaypeople.length; i++){
+        var dateofbirth= birthdaypeople[i].dob.split('/');
+        dateofbirth[2]="2016";
+        dateofbirthnnow= "'" + dateofbirth[0] + "/" + dateofbirth[1] + "/" + dateofbirth[2] + "'";
+
+
+        var differencedays = daysUntilDate(dateofbirthnow);
+         if (differencedays < 0){
+           differencedays +=365;
+         }
+     var entry=birthdaypeople.name;
+         reminder.push(entry)
+         console.log(differencedays)
+    }
+    return reminder;
+
+   }

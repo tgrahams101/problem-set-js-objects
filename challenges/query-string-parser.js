@@ -45,3 +45,21 @@
 */
 
 // YOUR CODE HERE
+var input= "first=alpha&last=omega";
+var string=input.toLowerCase().split('&');
+
+function parseQueryString(item){
+  var something=item.toLowerCase().split('&');
+  console.log(something);
+
+  something.forEach(function(string){
+    var keyandvalue=string.split("=");
+    var keyandvalueobject = {};
+    console.log(keyandvalue);
+
+    keyandvalueobject[keyandvalue[0]] = keyandvalue[1];
+    console.log(keyandvalueobject);
+  });
+
+
+}
